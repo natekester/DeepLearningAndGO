@@ -1,7 +1,7 @@
 import enum
 from collections import namedtuple
 
-class Player(enum.Enum):
+class Player(enum.Enum):#using an enum to represent players
     black = 1
     white = 2
 
@@ -11,6 +11,8 @@ class Player(enum.Enum):
 
 
 class Point(namedtuple('Point', 'row col')):
+    #named tupple allows us to access our points by point.row or point.col instead of point[0], point[1]
+    #I really like this code - and didn't know about the named tuple funcs
 
     def neighbors(self):
         return[
